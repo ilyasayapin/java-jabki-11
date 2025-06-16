@@ -132,6 +132,26 @@ public class HomeWork {
     }
 
     // 10. Сервис оценки товара
+    private static final List<Integer> ratings = new ArrayList<>();
+
+    public static String rateProduct(int rating) throws InvalidRatingException {
+        if (rating < 1 || rating > 5) {
+            throw new InvalidRatingException(rating);
+        }
+        ratings.add(rating);
+        return String.format("Рейтинг успешно сохранён: %d", rating);
+    }
+
+    public static String rateProduct(String ratingStr) {
+        try {
+            int rating = Integer.parseInt(ratingStr);
+            return rateProduct(rating);
+        } catch (NumberFormatException e) {
+            return String.format("Рейтинг %s не является числом", ratingStr);
+        } catch (InvalidRatingException e) {
+            return e.getMessage();
+        }
+    }
 
 }
 
