@@ -10,7 +10,8 @@ public class Main {
     public static void main(String[] args) {
 
         // 1. Безопасное деление
-        System.out.println("Безопасное деление: " + HomeWork.safeDivide(0, 1));
+        HomeWork.safeDivide(1, 0);
+        System.out.println("Безопасное деление: " + HomeWork.safeDivide(10, 5));
 
         // 2. Проверка строки
         try {
@@ -62,6 +63,7 @@ public class Main {
 
         // 8. Система логина
         HomeWork.login("admin", "12345");
+        HomeWork.login("admin", "1234");
 
         // 9. Банковский перевод с валидацией
         double from = 10.0;
@@ -72,17 +74,17 @@ public class Main {
             to = res[1];
             HomeWork.transfer(from, to, 90.0);
         } catch (InvalidTransferAmountException | InsufficientBalanceException e) {
-            System.out.printf("Ошибка: %s", e.getMessage());
+            System.out.printf("Ошибка: %s\n", e.getMessage());
         }
         try {
             HomeWork.transfer(from, to, 0.0);
         } catch (InvalidTransferAmountException | InsufficientBalanceException e) {
-            System.out.printf("Ошибка: %s", e.getMessage());
+            System.out.printf("Ошибка: %s\n", e.getMessage());
         }
         try {
             HomeWork.transfer(from, to, -90.0);
         } catch (InvalidTransferAmountException | InsufficientBalanceException e) {
-            System.out.printf("Ошибка: %s", e.getMessage());
+            System.out.printf("Ошибка: %s\n", e.getMessage());
         }
         System.out.printf("Баланс отправителя: %.2f%n", from);
         System.out.printf("Баланс получателя: %.2f%n%n", to);

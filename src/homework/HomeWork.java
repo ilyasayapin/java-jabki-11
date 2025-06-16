@@ -9,6 +9,13 @@ import java.util.Map;
 
 public class HomeWork {
 
+    // Объявление переменных
+    private static final Map<String, String> itemsMap = Map.of(
+            "A1", "Книга",
+            "B2", "Тетрадь",
+            "C3", "Ручка"
+    );
+
     // 1. Безопасное деление
     public static Integer safeDivide(int a, int b) {
         try {
@@ -64,12 +71,6 @@ public class HomeWork {
     }
 
     // 6. Поиск товара по коду
-    private static final Map<String, String> itemsMap = Map.of(
-            "A1", "Книга",
-            "B2", "Тетрадь",
-            "C3", "Ручка"
-    );
-
     public static void getItem(String code) {
         try {
             if (!itemsMap.containsKey(code)) {
