@@ -60,6 +60,10 @@ public class Main {
         // 7. Чтение из файла
         List<String> lines = HomeWork.readFile("file.txt");
 
+        // 8. Система логина
+        HomeWork.login("admin", "12345");
+
+
 
     }
 
