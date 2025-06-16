@@ -46,4 +46,9 @@ public class HomeWork {
             System.out.println("Возраст установлен: " + age);
         }
     }
+
+    // 5. Собственное исключение: депозит
+
+
+
 }

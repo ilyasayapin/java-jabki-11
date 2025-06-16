@@ -46,6 +46,9 @@ public class Main {
             System.out.println(e.getMessage());
         }
 
+        // 5. Собственное исключение: депозит
+
+
 
 
     }
