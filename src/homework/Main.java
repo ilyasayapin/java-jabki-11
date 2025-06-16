@@ -50,6 +50,9 @@ public class Main {
         HomeWork.deposit(-6);
         HomeWork.deposit(1);
 
+        // 6. Поиск товара по коду
+
+
 
 
 

@@ -61,6 +61,8 @@ public class HomeWork {
         }
     }
 
+    // 6. Поиск товара по коду
+
 
 
 }
