@@ -37,4 +37,13 @@ public class HomeWork {
         }
         return newList;
     }
+
+    // 4. Простая валидация возраста
+    public static void setAge(int age) {
+        if (age < 0) {
+            throw new IllegalArgumentException("Возраст не может быть отрицательным: " + age);
+        } else {
+            System.out.println("Возраст установлен: " + age);
+        }
+    }
 }

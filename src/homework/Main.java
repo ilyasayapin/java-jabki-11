@@ -28,7 +28,29 @@ public class Main {
 
         // 3. Преобразование строки в число
         System.out.println("Результат преобразования строк в числа: " + HomeWork.convertStrToNum(List.of("10", "abc", "5")));
+
+        // 4. Простая валидация возраста
+        try {
+            HomeWork.setAge(-6);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
+        try {
+            HomeWork.setAge(0);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
+        try {
+            HomeWork.setAge(7);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
+
+
+
     }
+
+
 
 
 }
