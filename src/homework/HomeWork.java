@@ -1,7 +1,5 @@
 package homework;
 
-import coffee.NoWaterException;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -152,7 +150,6 @@ public class HomeWork {
             return e.getMessage();
         }
     }
-
 }
 
 

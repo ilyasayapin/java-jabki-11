@@ -72,29 +72,31 @@ public class Main {
             to = res[1];
             HomeWork.transfer(from, to, 90.0);
         } catch (InvalidTransferAmountException | InsufficientBalanceException e) {
-            System.out.printf("Ошибка: %s%n", e.getMessage());
+            System.out.printf("Ошибка: %s", e.getMessage());
         }
         try {
             HomeWork.transfer(from, to, 0.0);
         } catch (InvalidTransferAmountException | InsufficientBalanceException e) {
-            System.out.printf("Ошибка: %s%n", e.getMessage());
+            System.out.printf("Ошибка: %s", e.getMessage());
         }
         try {
             HomeWork.transfer(from, to, -90.0);
         } catch (InvalidTransferAmountException | InsufficientBalanceException e) {
-            System.out.printf("Ошибка: %s%n", e.getMessage());
+            System.out.printf("Ошибка: %s", e.getMessage());
         }
         System.out.printf("Баланс отправителя: %.2f%n", from);
         System.out.printf("Баланс получателя: %.2f%n%n", to);
 
         // 10. Сервис оценки товара
-
-
-
-
-
-
+        System.out.println(HomeWork.rateProduct("3"));
+        System.out.println(HomeWork.rateProduct("abc"));
+        System.out.println(HomeWork.rateProduct("7"));
+        try {
+            System.out.println(HomeWork.rateProduct(3));
+            System.out.println(HomeWork.rateProduct(6));
+        } catch (InvalidRatingException e) {
+            System.out.printf("Ошибка: %s", e.getMessage());
+        }
     }
-
-
 }
+
