@@ -130,6 +130,9 @@ public class HomeWork {
                 amount, fromBalance, toBalance);
         return new double[]{fromBalance, toBalance};
     }
+
+    // 10. Сервис оценки товара
+
 }
 
 
