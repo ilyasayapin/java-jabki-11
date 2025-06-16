@@ -32,6 +32,7 @@ public class HomeWork {
                 newList.add(Integer.parseInt(s));
             } catch (NumberFormatException e) {
                 System.out.printf("Строка %s не может быть преобразована в число", s);
+                System.out.println();
             }
         }
         return newList;
