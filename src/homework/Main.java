@@ -1,5 +1,8 @@
 package homework;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -54,13 +57,11 @@ public class Main {
         HomeWork.getItem("A3");
         HomeWork.getItem("B2");
 
-
-
+        // 7. Чтение из файла
+        List<String> lines = HomeWork.readFile("file.txt");
 
 
     }
-
-
 
 
 }

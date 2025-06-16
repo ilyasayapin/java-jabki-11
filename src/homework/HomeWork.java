@@ -2,6 +2,9 @@ package homework;
 
 import coffee.NoWaterException;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -80,6 +83,23 @@ public class HomeWork {
             System.out.println("Ошибка: " + e.getMessage());
         }
     }
+
+    // 7. Чтение из файла
+    public static List<String> readFile(String path) {
+        List<String> lines = new ArrayList<>();
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(path));
+            String line;
+            while ((line = br.readLine()) != null) {
+                lines.add(line);
+            }
+        } catch (IOException e) {
+            System.out.printf("Ошибка чтения файла: %s", e.getMessage());
+            System.out.println();
+        }
+        return lines;
+    }
+
 
 
 }
