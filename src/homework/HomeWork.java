@@ -4,6 +4,7 @@ import coffee.NoWaterException;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class HomeWork {
 
@@ -62,7 +63,23 @@ public class HomeWork {
     }
 
     // 6. Поиск товара по коду
+    private static final Map<String, String> itemsMap = Map.of(
+            "A1", "Книга",
+            "B2", "Тетрадь",
+            "C3", "Ручка"
+    );
 
+    public static void getItem(String code) {
+        try {
+            if (!itemsMap.containsKey(code)) {
+                throw new ItemNotFoundException(code);
+            }
+            System.out.printf("Код: %s; Товар: %s", code, itemsMap.get(code));
+            System.out.println();
+        } catch (ItemNotFoundException e) {
+            System.out.println("Ошибка: " + e.getMessage());
+        }
+    }
 
 
 }

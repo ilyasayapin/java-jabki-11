@@ -51,6 +51,8 @@ public class Main {
         HomeWork.deposit(1);
 
         // 6. Поиск товара по коду
+        HomeWork.getItem("A3");
+        HomeWork.getItem("B2");
 
 
 
