@@ -1,5 +1,15 @@
+import coffee.CoffeeMaker;
+import coffee.NoWaterException;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        CoffeeMaker.makeCoffee(false);
+        CoffeeMaker.makeCoffee(true);
+
+        try {
+            CoffeeMaker.makeCoffeeV2(true);
+        } catch (NoWaterException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
