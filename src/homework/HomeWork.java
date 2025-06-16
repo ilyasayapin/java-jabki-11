@@ -101,14 +101,15 @@ public class HomeWork {
     }
 
     // 8. Система логина
-    public static void login(String username, String password) throws LoginFailedException {
+    public static void login(String username, String password) {
         try {
             String validUserName = "admin";
             String validPass = "1234";
-            if (validUserName.equals(username) || validPass.equals(password)) {
-                System.out.printf("Добро пожаловать, %s!", username);
-                System.out.println();
+            if (!validUserName.equals(username) || !validPass.equals(password)) {
+                throw new LoginFailedException();
             }
+            System.out.printf("Добро пожаловать, %s!", username);
+            System.out.println();
         } catch (LoginFailedException e) {
             System.out.println("Ошибка: " + e.getMessage());
         }
