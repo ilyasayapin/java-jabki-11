@@ -1,5 +1,7 @@
 package homework;
 
+import coffee.NoWaterException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,6 +50,16 @@ public class HomeWork {
     }
 
     // 5. Собственное исключение: депозит
+    public static void deposit(double amount) {
+        try {
+            if (amount < 0) {
+                throw new NegativeDepositException(amount);
+            }
+            System.out.println("Внесено на депозит: " + amount);
+        } catch (NegativeDepositException e) {
+            System.out.println("Ошибка: " + e.getMessage());
+        }
+    }
 
 
 

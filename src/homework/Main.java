@@ -47,6 +47,8 @@ public class Main {
         }
 
         // 5. Собственное исключение: депозит
+        HomeWork.deposit(-6);
+        HomeWork.deposit(1);
 
 
 
