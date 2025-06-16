@@ -116,7 +116,20 @@ public class HomeWork {
     }
 
     // 9. Банковский перевод с валидацией
-
+    public static double[] transfer(double fromBalance, double toBalance, double amount)
+            throws InvalidTransferAmountException, InsufficientBalanceException {
+        if (amount <= 0) {
+            throw new InvalidTransferAmountException(amount);
+        }
+        if (fromBalance < amount) {
+            throw new InsufficientBalanceException(amount, fromBalance);
+        }
+        fromBalance -= amount;
+        toBalance += amount;
+        System.out.printf("Переведено %.2f. Новый баланс отправителя: %.2f, получателя: %.2f%n",
+                amount, fromBalance, toBalance);
+        return new double[]{fromBalance, toBalance};
+    }
 }
 
 

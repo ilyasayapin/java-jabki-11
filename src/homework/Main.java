@@ -63,7 +63,29 @@ public class Main {
         // 8. Система логина
         HomeWork.login("admin", "12345");
 
-        // 9. Банковский перевод с валидацие
+        // 9. Банковский перевод с валидацией
+        double from = 100.0;
+        double to = 50.0;
+        try {
+            double[] res = HomeWork.transfer(from, to, 30.0);
+            from = res[0];
+            to = res[1];
+            HomeWork.transfer(from, to, 200.0);
+        } catch (InvalidTransferAmountException | InsufficientBalanceException e) {
+            System.out.printf("Ошибка: %s%n", e.getMessage());
+        }
+        try {
+            HomeWork.transfer(from, to, 0.0);
+        } catch (InvalidTransferAmountException | InsufficientBalanceException e) {
+            System.out.printf("Ошибка: %s%n", e.getMessage());
+        }
+        try {
+            HomeWork.transfer(from, to, -1.0);
+        } catch (InvalidTransferAmountException | InsufficientBalanceException e) {
+            System.out.printf("Ошибка: %s%n", e.getMessage());
+        }
+        System.out.printf("Баланс отправителя: %.2f%n", from);
+        System.out.printf("Баланс получателя: %.2f%n%n", to);
 
 
 
