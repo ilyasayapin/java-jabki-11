@@ -7,9 +7,21 @@ public class Main {
         System.out.println("Безопасное деление: " + HomeWork.safeDivide(0, 1));
 
         // 2. Проверка строки
-        HomeWork.validateString("  ");
-
-
+        try {
+            HomeWork.validateString("  ");
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
+        try {
+            HomeWork.validateString("");
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
+        try {
+            HomeWork.validateString("Проверка");
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
 

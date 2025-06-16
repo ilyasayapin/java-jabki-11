@@ -1,5 +1,8 @@
 package homework;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class HomeWork {
 
     // 1. Безопасное деление
@@ -22,6 +25,15 @@ public class HomeWork {
     }
 
     // 3. Преобразование строки в число
-
-
+    public static List<Integer> convertStrToNum(List<String> str) {
+        List<Integer> newList = new ArrayList<>();
+        for (String s : str) {
+            try {
+                newList.add(Integer.parseInt(s));
+            } catch (NumberFormatException e) {
+                System.out.printf("Строка %s не может быть преобразована в число", s);
+            }
+        }
+        return newList;
+    }
 }
