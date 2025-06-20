@@ -30,6 +30,4 @@ public class HomeWorkTest {
         List<Integer> testList = HomeWork.convertStrToNum(List.of("10", "abc", "5"));
         Assertions.assertEquals(List.of(10, 5), testList);
     }
-
-
 }
