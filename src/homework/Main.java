@@ -90,9 +90,6 @@ public class Main {
         System.out.printf("Баланс получателя: %.2f%n%n", to);
 
         // 10. Сервис оценки товара
-        System.out.println(HomeWork.rateProduct("3"));
-        System.out.println(HomeWork.rateProduct("abc"));
-        System.out.println(HomeWork.rateProduct("7"));
         try {
             System.out.println(HomeWork.rateProduct(3));
             System.out.println(HomeWork.rateProduct(6));

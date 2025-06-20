@@ -139,15 +139,4 @@ public class HomeWork {
         ratings.add(rating);
         return String.format("Рейтинг успешно сохранён: %d", rating);
     }
-
-    public static String rateProduct(String ratingStr) {
-        try {
-            int rating = Integer.parseInt(ratingStr);
-            return rateProduct(rating);
-        } catch (NumberFormatException e) {
-            return String.format("Рейтинг %s не является числом", ratingStr);
-        } catch (InvalidRatingException e) {
-            return e.getMessage();
-        }
-    }
 }
