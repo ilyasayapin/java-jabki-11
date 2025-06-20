@@ -86,8 +86,7 @@ public class HomeWork {
     // 7. Чтение из файла
     public static List<String> readFile(String path) {
         List<String> lines = new ArrayList<>();
-        try {
-            BufferedReader br = new BufferedReader(new FileReader(path));
+        try(BufferedReader br = new BufferedReader(new FileReader(path))) {
             String line;
             while ((line = br.readLine()) != null) {
                 lines.add(line);
